@@ -298,13 +298,13 @@ if ( class_exists( 'BP_Group_Extension' ) && function_exists( 'tribe_get_events'
                         echo '<a class="group-event-link" href="' . esc_url( get_permalink( $ev->ID ) ) . '">' .
                              esc_html( get_the_title( $ev ) ) .
                              '</a>';
-                        echo '<span class="group-event-date">';
+                        echo '<span class="group-event-date"> (';
                             echo '<span class="group-event-month">' .
                                  esc_html( tribe_get_start_date( $ev, false, 'M' ) ) .
                                  '</span> ';
                             echo '<span class="group-event-day">' .
                                  esc_html( tribe_get_start_date( $ev, false, 'j' ) ) .
-                                 '</span>';
+                                 ')</span>';
                         echo '</span>';
                     echo '</li>';
                 }
