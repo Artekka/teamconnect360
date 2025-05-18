@@ -119,10 +119,10 @@
     padding: 3% 0 3% 0 !important;
 }
 
-.group-event-heading, .group-event-heading h3 {
-    font-weight: 700;
-    font-size: 2.8rem;
-    color: #302D55;
+.group-event-heading, .group-event-heading h3, youzify-group-body h3 {
+    font-weight: 700 !important;
+    font-size: 2.8rem !important;
+    color: #302D55 !important;
 }
 
 .debug-log {
