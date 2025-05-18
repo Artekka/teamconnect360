@@ -279,7 +279,7 @@ if ( class_exists( 'BP_Group_Extension' ) && function_exists( 'tribe_get_events'
             ] );
         
             /* -------- Output -------- */
-            echo '<div class="group-event-container">';
+            echo '<div class="group-event-container group-event-tab">';
         
             echo '<h3 class="group-event-heading">' . esc_html__( 'Upcoming Events', 'tc360' ) . '</h3>';
         

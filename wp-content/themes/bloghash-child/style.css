@@ -119,6 +119,12 @@
     padding: 3% 0 3% 0 !important;
 }
 
+.group-event-heading {
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #302D55;
+}
+
 .debug-log {
     display: none;
 }
