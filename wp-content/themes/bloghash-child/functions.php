@@ -3,6 +3,14 @@
  * Child Theme Functions
  */
 
+ // Load parent theme styles
+add_action( 'wp_enqueue_scripts', 'bloghash_child_enqueue_styles' );
+function bloghash_child_enqueue_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
+
+
+}
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -166,68 +174,6 @@ function show_user_rsvp_events() {
     // Output sections
     render_event_list( $upcoming, 'Your Upcoming Events' );
     render_event_list( $past, 'Your Past Events' );
-}
-
-
-
-
-
-/*
-function render_user_rsvp_events() {
-    add_action( 'bp_template_content', function() {
-        global $wpdb;
-
-        $user_id = bp_displayed_user_id();
-        if ( ! $user_id ) return;
-
-        $table = $wpdb->prefix . 'tribe_rsvp_attendees';
-
-        //Get event IDs the user has RSVP'd to
-        $event_ids = $wpdb->get_col( $wpdb->prepare(
-            "SELECT DISTINCT event_id FROM $table WHERE user_id = %d",
-            $user_id
-        ) );
-
-        if ( empty( $event_ids ) ) {
-            echo '<p>You haven’t RSVP’d to any events yet.</p>';
-            return;
-        }
-
-        $events = new WP_Query( array(
-            'post_type'      => 'tribe_events',
-            'post__in'       => $event_ids,
-            'orderby'        => 'post_date',
-            'order'          => 'DESC',
-            'posts_per_page' => 10,
-        ) );
-
-        if ( $events->have_posts() ) {
-            echo '<ul class="user-rsvp-events">';
-            while ( $events->have_posts() ) {
-                $events->the_post();
-                echo '<li>';
-                echo '<a href="' . esc_url( get_permalink() ) . '">' . esc_html( get_the_title() ) . '</a>';
-                echo ' — ' . esc_html( tribe_get_start_date( null, false, 'F j, Y @ g:i a' ) );
-                echo '</li>';
-            }
-            echo '</ul>';
-            wp_reset_postdata();
-        } else {
-            echo '<p>No RSVP’d events found.</p>';
-        }
-    });
-
-    bp_core_load_template( 'members/single/plugins' );
-}
-*/
-
-// Load parent theme styles
-add_action( 'wp_enqueue_scripts', 'bloghash_child_enqueue_styles' );
-function bloghash_child_enqueue_styles() {
-    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
-
-
 }
 
 // Enabling upcoming group events
@@ -419,28 +365,6 @@ function render_event_club_metabox( $post ) {
     <?php
 }
 
-/*
-function render_event_club_metabox( $post ) {
-    if ( ! function_exists( 'groups_get_groups' ) ) {
-        echo 'BuddyPress is not active.';
-        return;
-    }
-
-    $groups   = groups_get_groups( array( 'per_page' => false ) )->groups;
-    $selected = get_post_meta( $post->ID, '_bp_group_id', true );
-    ?>
-    <label for="buddypress_group_id">Select a Club:</label>
-    <select name="buddypress_group_id" id="buddypress_group_id" style="width:100%;">
-        <option value="">— None —</option>
-        <?php foreach ( $groups as $group ) : ?>
-            <option value="<?php echo esc_attr( $group->id ); ?>" <?php selected( $selected, $group->id ); ?>>
-                <?php echo esc_html( $group->name ); ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
-    <?php
-}
-*/
 // 3. Save Club Selection When Event Is Saved
 add_action( 'save_post_tribe_events', function( $post_id ) {
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
