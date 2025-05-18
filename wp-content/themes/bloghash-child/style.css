@@ -1,0 +1,214 @@
+/**
+ * Theme Name: Blog Hash-Child
+ * Template:   bloghash
+ */
+
+@import url("../bloghash/style.css");
+
+/* Base styles for the avatar menu item */
+.avatar-menu-item {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.avatar-menu-item a {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.avatar-menu-item img {
+    border-radius: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 8px !important;
+}
+
+.tribe-common-b2 {
+    font-size: 1.2em;
+}
+
+.event-tickets .tribe-tickets__rsvp-form-button--cancel {
+    width: 50% !important;
+}
+
+.tribe-events-c-view-selector__list-item-text {
+    font-size: 1.75em !important;
+}
+
+
+/* RSVP Link call to action highlight */
+.tribe-link-view-attendee a{
+    color: #cb2eaf !important;
+}
+
+/* Google Maps fix */
+.tribe-events-venue-map > iframe, .tribe-events-meta-group-gmap, div[id^="tribe-events-gmap"] {
+    max-height: unset !important;
+    max-width: 100% !important;
+ }
+
+ .tribe-events-venue-map, .tribe-events-event-meta.primary, .tribe-events-event-meta.secondary {
+    width: 100% !important;
+ }
+
+ /* Groups & Profile fixes */
+
+.youzify-search-landing-image-container {
+    max-height: 200px !important;
+}
+
+.youzify-group-data .item {
+    width: 90% !important;
+}
+
+.youzify-recent_posts {
+    display: none;
+}
+
+/*RSVP list */
+.user-rsvp-list-item, .group-event-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #0073aa;
+    margin-bottom: 25px;
+    padding: 5% !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.user-rsvp-list-item:hover, .group-event-item:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-rsvp-events {
+    list-style: none;
+    padding: 0;
+    margin: 1.5em 0;
+}
+
+.user-rsvp-link, .group-event-link {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.user-rsvp-link:hover {
+    text-decoration: underline;
+}
+
+.user-rsvp-month,
+.user-rsvp-day,
+.user-rsvp-year,
+.user-rsvp-hour,
+.user-rsvp-minute,
+.user-rsvp-period {
+    display: inline;
+    font-weight: 500;
+    color: #555;
+}
+
+.user-rsvp-month {
+    margin-right: 0.25em;
+}
+
+.youzify-main-column h3, group-event-container h3  {
+    padding: 3% 0 3% 0 !important;
+}
+
+.debug-log {
+    display: none;
+}
+
+/* 
+*
+*
+*
+*
+
+Mobile breakpoint adjustments only please <3
+
+*
+*
+*
+*
+*/
+
+@media screen and (max-width: 960px) {
+    .avatar-menu-item {
+        padding: 10px 10px !important;
+        margin: 0 !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .avatar-menu-item img {
+        width: 30px !important;
+        height: 30px !important;
+        margin-right: 10px !important;
+        vertical-align: middle !important;
+    }
+    
+    /* Make sure avatar aligns with other menu items */
+    .avatar-menu-item a {
+        padding: 5px 0 !important;
+        height: auto !important;
+        line-height: normal !important;
+    }
+    
+    #bloghash-primary-nav .menu-item,
+    .site-navigation .menu-item {
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    #tribe-events-view-selector-content {
+        width: 150px !important;
+    }
+
+    .event-tickets .tribe-tickets__rsvp-form-button--cancel {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .youzify-navbar-item {
+        padding-left: 25px !important;
+    }
+
+    .youzify-active-menu {
+        padding-left: 20px !important;
+    }
+}
+
+/* Small screen specific adjustments */
+@media screen and (max-width: 480px) {
+    .avatar-menu-item {
+        padding: 12px 28px !important;
+    }
+    .avatar-menu-item img {
+        width: 30px !important;
+        height: 30px !important;
+        margin-right: 10px !important;
+    }
+    #tribe-events-view-selector-content {
+        width: 150px !important;
+    }
+
+    .event-tickets .tribe-tickets__rsvp-form-button--cancel {
+        width: 50% !important;
+    }
+
+    .youzify-search-landing-image-container {
+        min-height: 150px !important;
+    }
+
+    .youzify-mobile-nav .youzify-inline-mobile-nav {
+        display: none !important;
+    }
+    
+}

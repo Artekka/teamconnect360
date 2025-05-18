@@ -1,0 +1,196 @@
+/**
+ * This CSS file was auto-generated via PostCSS
+ *
+ * Contributors should avoid editing this file, but instead edit the associated
+ * src/resources/postcss/ file. For more information, check out our engineering
+ * docs on how we handle CSS in our engineering docs.
+ *
+ * @see: https://the-events-calendar.github.io/products-engineering/docs/code-standards/css/
+ */
+
+/**
+ * Event Tickets - Admin Orders Page
+ *
+ * @since 5.13.0
+ */
+
+/**
+ * Event Tickets - Orders SVGs
+ *
+ * @since 5.13.4
+ */
+
+body.wp-admin.post-type-tec_tc_order div.tablenav.top .tribe-datepicker {
+			margin-right: var(--tec-spacer-1);
+		}
+
+body.wp-admin.post-type-tec_tc_order div.tablenav.top [for="tec_tc_data-range-to"] {
+			color: #333;
+			font-size: var(--tec-font-size-2);
+			font-weight: var(--tec-font-weight-regular);
+			line-height: 1.23;
+			margin-left: calc(var(--tec-spacer-0)*-1);
+			margin-right: var(--tec-spacer-0);
+			text-align: left;
+		}
+
+body.wp-admin.post-type-tec_tc_order div.tablenav.top div.actions.tribe-validation .select2-container {
+				margin-left: var(--tec-spacer-3);
+				min-width: 180px !important;
+			}
+
+body.wp-admin.post-type-tec_tc_order div.tablenav.top div.actions.tribe-validation .select2-container .selection {
+					display: inline-block;
+					width: 100%;
+				}
+
+body.wp-admin.post-type-tec_tc_order div.tablenav.top div.actions.tribe-validation .select2-container .selection .select2-selection {
+						width: 100%;
+					}
+
+body.wp-admin.post-type-tec_tc_order div.tablenav.top #post-query-submit {
+			margin-left: var(--tec-spacer-3);
+		}
+
+.tribe-dashicons--code {
+		font-family: monospace;
+	}
+
+.tribe-dashicons .dashicons {
+		height: 16px;
+		padding-left: var(--tec-spacer-0);
+		width: 16px;
+	}
+
+.tribe-dashicons .tribe-icon-trash {
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='12' viewBox='0 0 10 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M9.09083 2.77892H0.910186C0.54915 2.77892 0.292539 3.04568 0.339725 3.37148L1.40649 10.7412C1.4537 11.0669 1.78758 11.3337 2.14861 11.3337H7.85268C8.2138 11.3337 8.54759 11.0669 8.59499 10.7412L9.66154 3.37148C9.70875 3.04578 9.4519 2.77892 9.09089 2.77892H9.09083ZM3.31975 9.65984C3.31975 10.2382 2.33527 10.2382 2.33527 9.65984V4.61203C2.33527 4.03375 3.31975 4.03375 3.31975 4.61203V9.65984ZM5.50755 9.65984C5.50755 10.2382 4.52307 10.2382 4.52307 9.65984V4.61203C4.52307 4.03375 5.50755 4.03375 5.50755 4.61203V9.65984ZM7.69514 9.65984C7.69514 10.2382 6.71077 10.2382 6.71077 9.65984V4.61203C6.71077 4.03375 7.69514 4.03375 7.69514 4.61203V9.65984ZM9.66687 1.39333V2.0526C9.66687 2.21178 9.52536 2.34078 9.35046 2.34078L0.650169 2.34068C0.475611 2.34068 0.333984 2.21179 0.333984 2.0525V1.39323C0.333984 1.23405 0.475603 1.10525 0.650169 1.10525H3.51841V0.954967C3.51841 0.795788 3.65992 0.666992 3.83459 0.666992H6.38632C6.5612 0.666992 6.70302 0.795878 6.70302 0.954967V1.10525H9.35077C9.52554 1.10525 9.66695 1.23434 9.66695 1.39333L9.66687 1.39333Z' fill='%23b32d2e'/%3E %3C/svg%3E");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+.tribe-tickets-commerce-order-status {
+	align-items: center;
+	background: #c3c4c7;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: var(--tec-border-radius-default);
+	color: #2c3338;
+	cursor: inherit !important;
+	display: inline-flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	line-height: 1em;
+	margin: 0;
+	max-width: 100%;
+	padding: var(--tec-spacer-1);
+	white-space: nowrap;
+}
+
+.tribe-tickets-commerce-order-status .dashicons {
+		font-size: 16px;
+		height: 16px;
+		margin-right: var(--tec-spacer-0);
+		width: 16px;
+	}
+
+.tribe-tickets-commerce-order-status.status-pending {
+		background: #f5e6ab;
+		border-color: #f0c33c;
+	}
+
+.tribe-tickets-commerce-order-status.status-completed {
+		background: var(--tec-admin-core-green-5);
+		border-color: var(--tec-admin-core-green);
+	}
+
+.tribe-tickets-commerce-order-status.status-denied,
+	.tribe-tickets-commerce-order-status.status-failed {
+		border-color: #646970;
+	}
+
+.tribe-tickets-commerce-order-status.status-voided,
+	.tribe-tickets-commerce-order-status.status-refunded {
+		background: #fff;
+		border-color: #c3c4c7;
+	}
+
+.tribe-tickets-commerce-order-status.status-trash {
+		background: #eba3a3;
+		color: #761919;
+	}
+
+.tec-tickets-commerce-price-container {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+}
+
+.tec-tickets-commerce-price-container ins {
+		margin-right: var(--tec-spacer-1);
+		text-decoration: none;
+	}
+
+@media screen and (max-width: 780px) {
+
+body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders {
+			background: none;
+			border: none
+	}
+
+			body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders thead,
+			body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders tfoot {
+				display: none;
+			}
+
+			body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders tr.is-expanded {
+				display: block;
+				padding: var(--tec-spacer-3) var(--tec-spacer-5);
+			}
+
+body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list {
+
+				/* we hates important, my precious, but we musts override it. */
+		}
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list td {
+					padding-bottom: var(--tec-spacer-0);
+					padding-top: var(--tec-spacer-0);
+				}
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-gateway {
+					display: none !important;
+				}
+
+.tec-tickets-commerce-price-container {
+		margin-bottom: 0
+}
+		}
+
+@media screen and (min-width: 780px) {
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-order {
+					min-width: 240px;
+				}
+
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-status {
+					width: 10ch;
+				}
+
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-items {
+					width: 18ch;
+				}
+
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-total {
+					width: 14ch;
+				}
+
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-date {
+					width: 15ch;
+				}
+
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-post_parent {
+					width: 20ch;
+				}
+
+				body.wp-admin.post-type-tec_tc_order table.tribe-tickets-commerce-orders #the-list .column-gateway {
+					display: table-cell;
+					width: 20ch;
+				}
+			}
