@@ -115,7 +115,7 @@
     margin-right: 0.25em;
 }
 
-.youzify-main-column h3, group-event-container h3  {
+.youzify-main-column h3, .group-event-container h3, .group-event-heading  {
     padding: 3% 0 3% 0 !important;
 }
 
