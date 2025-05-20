@@ -457,7 +457,7 @@ function login_redirect_script() {
             var redirectParam = currentUrl.searchParams.get('redirect_to');
             
             // Set the new base URL once migrated to client's host!!
-            var newUrl = 'http://65.19.167.55//login/';
+            var newUrl = 'https//kpsrofun.com/login/';
             
             link.href = newUrl;
         });
