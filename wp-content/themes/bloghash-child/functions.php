@@ -447,17 +447,17 @@ function login_redirect_script() {
     ?>
     <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
-        //Brute force checking all login links
-        var loginLinks = document.querySelectorAll('.bp-login-nav a, a[href*="wp-login.php"], a[href*="65.19.167.55/login"]');
+        // Brute force checking all login links
+        const loginLinks = document.querySelectorAll('.bp-login-nav a, a[href*="wp-login.php"], a[href*="65.19.167.55/login"], a[href*="65.19.167.55"]');
         
         // Replace their URLs with the custom login page
         loginLinks.forEach(function(link) {
             // Preserve any redirect parameters
-            var currentUrl = new URL(link.href);
-            var redirectParam = currentUrl.searchParams.get('redirect_to');
+            const currentUrl = new URL(link.href);
+            const redirectParam = currentUrl.searchParams.get('redirect_to');
             
-            // Set the new base URL once migrated to client's host!!
-            var newUrl = 'https://kpsrofun.com/login/';
+            // Set the new base URL
+            let newUrl = 'https://kpsrofun.com/login/';
             
             // Add the redirect parameter if it exists
             if (redirectParam) {
