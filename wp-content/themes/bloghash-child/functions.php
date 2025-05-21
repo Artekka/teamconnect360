@@ -496,3 +496,13 @@ function populate_bp_groups_select($field) {
     }
     return $field;
 }
+
+// Force CSS to load newest version every commit and pull
+
+function add_style_version_parameter($src) {
+    if (strpos($src, 'ver=') !== false)
+        return $src;
+    
+    return add_query_arg('ver', time(), $src);
+}
+add_filter('style_loader_src', 'add_style_version_parameter', 10, 1);
