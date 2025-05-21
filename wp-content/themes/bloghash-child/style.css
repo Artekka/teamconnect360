@@ -39,9 +39,13 @@
 }
 
 
-/* RSVP Link call to action highlight */
+/* RSVP Link call to action highlight and centering */
 .tribe-link-view-attendee a{
     color: #cb2eaf !important;
+}
+
+.tribe-common event-tickets {
+    place-items: center;
 }
 
 /* Google Maps fix */
@@ -129,15 +133,38 @@
     display: none;
 }
 
+/*
+*
+*
+Desktop specific breakpoint adjustments only please <3
+*
+*
+*/
+
+@media screen and (min-width: 768px) {
+    .tribe-events-event-meta.secondary {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  
+    /* Make venue info only take up as much space as it needs */
+    .tribe-events-meta-group-venue {
+      flex: 0 0 auto; /* Don't grow, don't shrink, auto width based on content */
+      padding-right: 20px; /* Add some spacing between venue info and map */
+    }
+  
+    /* Make the Google Map fill the remaining space */
+    .tribe-events-venue-map {
+      flex: 1; /* Fill remaining space */
+      min-width: 0; /* Prevent flex items from overflowing */
+    }
+  }
+
 /* 
 *
 *
 *
-*
-
 Mobile breakpoint adjustments only please <3
-
-*
 *
 *
 *
